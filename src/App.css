@@ -1,4 +1,16 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
+#root {
+    background: black;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 520px;
+    background: black;
 }
