@@ -10,9 +10,9 @@ import './Keypad.css';
 
 export default class Keypad extends Component {
     render() {
-        return ( < div className = "keypad" > {
+        return ( <div className = "keypad" > {
                 keypadKeys.map((block, index) => {
-                    return ( < div key = {
+                    return ( <div key = {
                             index
                         }
                         className = "block" > {
