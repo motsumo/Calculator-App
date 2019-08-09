@@ -1,7 +1,9 @@
 import Button from './Button/Button'
-import Button from './Keypad/Keypad'
+import Keypad from './Keypad/Keypad'
+import Screen from './Screen/Screen'
 
 export default {
     Button,
-    Keypad
+    Keypad,
+    Screen
 }
