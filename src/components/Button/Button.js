@@ -4,6 +4,7 @@ import {
   specialOperators
 } from '../../utils/constants'
 import './Button.css';
+
 export default ({
   onButtonClick,
   buttonKey
@@ -23,7 +24,7 @@ export default ({
   <button 
     name = { buttonKey } 
     className = { classNames.join(' ').trim() } 
-    onClick = { handleClick }
+    onClick = {handleClick}
   >
     { buttonKey } 
   </button>

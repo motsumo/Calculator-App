@@ -18,6 +18,8 @@
     font-size: 40px;
     width: 90%;
     align-self: flex-end;
+    background-color: black;
+    border: none
 }
 
 .screen-bottom {
