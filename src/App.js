@@ -16,18 +16,42 @@ import * as fromCalculator from "./store";
 import './App.css';
 
 export class App extends Component {
+  handleKeyDown = (event) => {
+
+    let {
+      key
+    } = event
+
+    if ((/\d/).test(key) || (/[+\-*\/.%]/).test(key)) {
+      event.preventDefault()
+      this.props.calculate(key);
+    } else if (key === 'Delete') {
+      event.preventDefault()
+      this.props.clear()
+    } else if (key === 'Backspace') {
+      event.preventDefault()
+      this.props.delete()
+    } else if (key === "Enter") {
+      event.preventDefault()
+      this.props.evaluate()
+    }
+  };
+
   componentDidMount() {
-    document.addEventListener("keydown", this.props.keyPress );
+    document.addEventListener("keydown", this.handleKeyDown);
   }
 
   render() {
-    return ( 
-    <div id='app'>
-      <div className = "calculator-container">
-        <Screen {...this.props}/>
-        <Keypad {...this.props}/>
+    return ( <div id = 'app' >
+        <div className = "calculator-container" >
+          <Screen {
+          ...this.props
+          }/> 
+          <Keypad {
+          ...this.props
+          }/> 
+        </div > 
       </div>
-    </div>
     );
   }
 }
