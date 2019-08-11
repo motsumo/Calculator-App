@@ -6,7 +6,7 @@ export default (props) => {
 return (
     <div className="screen">
       <Textfit
-        max={40}
+        max={20}
         throttle={60}
         mode="single"
         className="screen-top"
@@ -15,7 +15,7 @@ return (
         { props.expression }
       </Textfit>
       <Textfit
-        max={150}
+        max={80}
         mode="single"
         className="screen-bottom"
         forceSingleModeWidth={false}

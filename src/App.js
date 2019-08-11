@@ -17,14 +17,17 @@ import './App.css';
 
 export class App extends Component {
   componentDidMount() {
-    console.log("mounted calculator!");
+    document.addEventListener("keydown", this.props.keyPress );
   }
 
   render() {
-    return ( <div className = "calculator-container">
+    return ( 
+    <div id='app'>
+      <div className = "calculator-container">
         <Screen {...this.props}/>
         <Keypad {...this.props}/>
       </div>
+    </div>
     );
   }
 }

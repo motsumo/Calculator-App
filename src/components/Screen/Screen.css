@@ -11,11 +11,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding-right: 10px;
 }
 
 .screen-top {
-    flex: 1;
-    font-size: 40px;
+    flex: 0.5;
+    font-size: 30px;
     width: 90%;
     align-self: flex-end;
     background-color: black;
@@ -23,8 +24,8 @@
 }
 
 .screen-bottom {
-    flex: 2;
-    font-size: 200px;
+    flex: 1;
+    font-size: 90px;
     width: 80%;
     align-self: flex-end;
 }

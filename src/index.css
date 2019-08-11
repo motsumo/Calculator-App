@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 100 14px 'Roboto';
+}
+
+#app {
+    width: 320px;
+    height: 520px;
+    position: relative;
+}
