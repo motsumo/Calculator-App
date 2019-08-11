@@ -24,8 +24,8 @@ function setExpression({
         return `${percent}`;
       }
       if (action.payload === "±") {
-        let percent = -total;
-        return `${percent}`;
+        let reverseTotal = -total;
+        return `${reverseTotal}`;
       }
       return `${!expression && total ? total : ""}${expression +
         action.payload}`;
@@ -47,7 +47,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         expression: "",
-          total: 0
+        total: 0
       };
     case types.DELETE_LAST_EXPRESSION_ENTRY:
       let exp = state.expression;
@@ -58,13 +58,13 @@ export default (state = initialState, action) => {
       return {
         ...state,
         expression: exp,
-          total: calculate(exp)
+        total: calculate(exp)
       };
     case types.EVALUATE_EXPRESSION:
       return {
         ...state,
         expression: "",
-          total: calculate(state.expression) || state.expression || state.total
+        total: calculate(state.expression) || state.expression || state.total
       };
     default:
       return state;

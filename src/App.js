@@ -22,18 +22,18 @@ export class App extends Component {
       key
     } = event
 
-    if ((/\d/).test(key) || (/[+\-*\/.%]/).test(key)) {
+    if ((/\d/).test(key) || (/[+\-*\/.%]/).test(key)) {      
       event.preventDefault()
-      this.props.calculate(key);
+      this.props.calculate(key);      
     } else if (key === 'Delete') {
       event.preventDefault()
       this.props.clear()
     } else if (key === 'Backspace') {
       event.preventDefault()
       this.props.delete()
-    } else if (key === "Enter") {
+    } else if (key === "Enter" || key === "=") {
       event.preventDefault()
-      this.props.evaluate()
+      this.props.evaluate()      
     }
   };
 
@@ -75,7 +75,7 @@ const mapDispatchToProps = dispatch => {
       dispatch(clear());
     },
     evaluate: () => {
-      dispatch(evaluateExpression());
+      dispatch(evaluateExpression());      
     }
   };
 };
