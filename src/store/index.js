@@ -1,22 +1,19 @@
-import {
-    createStore,
-    combineReducers
-} from 'redux';
-import calculateReducer from './reducers/calculateReducer'
+import { createStore, combineReducers } from 'redux';
+import calculateReducer from './reducers/calculateReducer';
 
 const rootReducer = combineReducers({
-    calculator: calculateReducer
-})
+	calculator: calculateReducer,
+});
 
 export default createStore(
-    rootReducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
+	rootReducer,
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
-export const getExpression = (state) => {
-    return state.calculator.expression
-}
+export const getExpression = state => {
+	return state.calculator.expression;
+};
 
-export const getTotal = (state) => {
-    return state.calculator.total
-}
+export const getTotal = state => {
+	return state.calculator.total;
+};
